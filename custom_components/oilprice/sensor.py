@@ -1,5 +1,5 @@
 """
-A component which allows you to parse http://www.qiyoujiage.com/zhejiang.shtml get oil price
+A component which allows you to parse http://www.qiyoujiage.com/beijing.shtml get oil price
 
 For more details about this component, please refer to the documentation at
 https://github.com/aalavender/OilPrice/
