@@ -17,13 +17,13 @@ from homeassistant.const import (CONF_NAME, CONF_REGION)
 from requests import request
 from bs4 import BeautifulSoup
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 _LOGGER = logging.getLogger(__name__)
 
 REQUIREMENTS = ['requests', 'beautifulsoup4']
 
 COMPONENT_REPO = 'https://github.com/aalavender/OilPrice/'
-SCAN_INTERVAL = datetime.timedelta(hours=8)
+SCAN_INTERVAL = datetime.timedelta(hours=1)
 ICON = 'mdi:gas-station'
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -75,5 +75,5 @@ class OilPriceSensor(Entity):
         return ICON
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return self._entries
